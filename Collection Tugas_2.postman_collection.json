@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "67556b76-c3f7-4cf1-8ecf-866361b16970",
+		"name": "Collection Tugas_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15163723"
+	},
+	"item": [
+		{
+			"name": "Add All Participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"John Doe\",\r\n        \"address\": \"123 Main St\",\r\n        \"phoneNumber\": \"0123456789\"\r\n    },\r\n    {\r\n        \"name\": \"Jane Smith\",\r\n        \"address\": \"456 Elm St\",\r\n        \"phoneNumber\": \"9876543210\"\r\n    },\r\n    {\r\n        \"name\": \"Michael Johnson\",\r\n        \"address\": \"789 Oak Ave\",\r\n        \"phoneNumber\": \"3456789012\"\r\n    },\r\n    {\r\n        \"name\": \"Emily Williams\",\r\n        \"address\": \"567 Pine Rd\",\r\n        \"phoneNumber\": \"8901234567\"\r\n    },\r\n    {\r\n        \"name\": \"David Lee\",\r\n        \"address\": \"234 Birch Ln\",\r\n        \"phoneNumber\": \"4567890123\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/participants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Single Participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"John Doe\",\r\n        \"address\": \"123 Main St\",\r\n        \"phoneNumber\": \"0123456789\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/participants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Participant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/participants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Participant By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/participants/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Participant By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Don\",\r\n    \"address\": \"23 A Street\",\r\n    \"phoneNumber\": \"0821225821333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/participants/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Participant By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/participants/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Participant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/participants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
