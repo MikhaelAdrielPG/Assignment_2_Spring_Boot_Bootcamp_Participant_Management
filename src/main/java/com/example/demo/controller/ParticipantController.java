@@ -20,22 +20,19 @@ public class ParticipantController {
     // Menampilkan semua data peserta
     @GetMapping("")
     public ResponseEntity getAllParticipants() {
-        List<Participant> participants = participantService.getAllParticipants();
-
-        if (participants.isEmpty()) {
+        if (participantService.getAllParticipants().isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).
                     body(new ApiResponse("Participant not found.", null));
         } else {
-            return ResponseEntity.status(HttpStatus.OK).body(participants);
+            return ResponseEntity.status(HttpStatus.OK).body(participantService.getAllParticipants());
         }
     }
 
     // Menampilkan data peserta berdasarkan id
     @GetMapping("/{id}")
     public ResponseEntity getParticipantById(@PathVariable int id) {
-        Participant participant = participantService.getParticipantById(id);
-        if (participant != null) {
-            return ResponseEntity.status(HttpStatus.OK).body(participant);
+        if (participantService.getParticipantById(id) != null) {
+            return ResponseEntity.status(HttpStatus.OK).body(participantService.getParticipantById(id));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).
                     body(new ApiResponse("Participant not found.", null));
